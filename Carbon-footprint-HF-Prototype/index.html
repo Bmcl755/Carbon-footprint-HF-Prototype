@@ -7,33 +7,65 @@
 		<link rel="stylesheet" href="index.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-		<style>
-			body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
-			.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
-		</style>
 	</head>
 	<body>
 		<div id="wrapper">
 			<div id="top">
 				
-				<div id="colour-bar"></div>
+				<!-- The Register Modal -->
+				<div id="register-modal" class="modal">
+					<div class="form-ct">
+						<span class="close">&times;</span>
+						<h3>Register with us! Enter your details below!</h3>
+						<hr id="title-divider">
+						
+						<h4>User Details</h4>
+						
+						<div id="userInfo" class="modal-section">
+							<label for="given-name"><b>Given name</b></label>
+							<input type="text" placeholder="Enter your given name" name="given-name" id="given-name" required>							
+							<label for="surname"><b>Surname</b></label>
+							<input type="text" placeholder="Enter your Surname" name="surname" id="surname" required>
+							<label for="username"><b> Username</b></label>
+							<input type="text" placeholder="Enter Username" name="username" id="username" required>
+							<label for="psw"><b>Password</b></label>
+							<input type="password" placeholder="Enter Password" name="psw" id="psw" required>	
+						</div>
+						
+						<hr id="userInfo-divider">
+						
+						<h4>Addresses</h4>
+						
+						<div id="addressInfo" class="modal-section">
+							<label for="home-address"><b>Home Address</b></label>
+							<input type="text" placeholder="Enter your home address" name="home-address" id="home-address" required>
+							<label for="work-address"><b>Work Address</b></label>
+							<input type="text" placeholder="Enter your work address" name="work-address" id="work-address" required>	
+						</div>
+						
+						<hr id="addressInfo-divider">
+						
+						<h4>Contacts</h4>
+						
+						<div id="contactInfo" class="modal-section">
+							<label for="mobile-number"><b>Mobile Number</b></label>
+							<input type="text" placeholder="Enter your mobile number" name="mobile-number" id="mobile-number" required>
+							<label for="email"><b>Email</b></label>
+							<input type="text" placeholder="Enter your email" name="email" id="email" required>	
+						</div>
+						
+						<hr id="contactInfo-divider">
+						
+						<button id="submit-btn">Submit</button>
+					</div>
+				</div>
+				
+				<div id="colour-bar" class="base-background-colour"></div>
 				
 				<!-- Register Button -->
 				<div id="register">
-					<button id="register-btn">Register</button>
+					<button id="trigger-modal">Register with us!</button>
 				</div>
-				
-				<!-- The Register Modal -->
-				
-				<!--
-				<div id="myModal" class="modal">
-				  <!-- Modal content 
-				  <div class="modal-content">
-					<span class="close">&times;</span>
-					<p>Some text in the Modal..</p>
-				  </div>
-				</div>
-				-->
 			</div>
 			<div id="main">
 				<!-- Main three section -->
@@ -41,19 +73,24 @@
 					<div class="header-section">
 						<div class="side-section">
 							<h1>Who we are</h1>
-							<p>Reveal how deep your iceberg goes Reveal how deep your iceberg goes Reveal how deep your iceberg goes</p>
+							<hr>
+							<p>We are an extremely environmentally conscious bunch that is dedicated to making a positive impact on our planet. We strive to create a better-informed population that will endeavour for a greener and more sustainable future for generations to come. We believe there is great power in education and awareness and create tools to allow users to start their journey to become an agent of ecological change.</p>
 						</div>
 					</div>
-					<div class="header-section">
-						<div class="start-section">
+					<div id="start-section" class="header-section">
+						<div>
 							<h2>Explore beyond the "tip of your ecological iceberg"<h2>
 							<h2>Reveal how deep your iceberg goes</h2>
+						</div>
+						<div id="start">
+							<img id="start-image" src="startbutton-colour.png" alt="start quiz button"></img>
 						</div>
 					</div>
 					<div class="header-section">
 						<div class="side-section">
 							<h1>A future we can change</h1>
-							<p>Reveal how deep your iceberg goes Reveal how deep your iceberg goes Reveal how deep your iceberg goes</p>
+							<hr>
+							<p>We have created an online web-based Carbon Footprint calculator. It assesses your carbon footprint from the answers you give based on your personal habits and returns your results and suggested next steps for improvement. By using this tool, we can all collectively work together to ensure we protect our precious world.</p>
 						</div>
 					</div>
 				</div>
@@ -68,12 +105,13 @@
 		
 		<!-- Navbar -->
 		<div id="nav-wrapper">
-		  <div id="bot-nav" >
+		  <div id="bot-nav" class="base-background-colour">
 			<a href="index.html" >Home</a>
 			<a href="index.html" >About Us</a>
 			<a href="index.html" >Contact Us</a>
 			<a href="index.html" >Learn More</a>
 		  </div>
 		</div>
+	<script src="modal.js"></script>
 	</body>
 </html>
